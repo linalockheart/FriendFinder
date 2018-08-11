@@ -1,7 +1,7 @@
 friendsList = [
     {
-        name: "Lina"
-        photo: "photo"
+        name: "Lina",
+        photo: "photo",
         responses: [
             "0",
             "0",
@@ -16,8 +16,8 @@ friendsList = [
         ]
     },
     {
-        name: "Gab"
-        photo: "photo"
+        name: "Gab",
+        photo: "photo",
         responses: [
             "0",
             "0",
@@ -32,8 +32,8 @@ friendsList = [
         ]
     },
     {
-        name: "Cait"
-        photo: "photo"
+        name: "Cait",
+        photo: "photo",
         responses: [
             "0",
             "0",
@@ -48,8 +48,8 @@ friendsList = [
         ]
     },
     {
-        name: "Jake"
-        photo: "photo"
+        name: "Jake",
+        photo: "photo",
         responses: [
             "0",
             "0",
