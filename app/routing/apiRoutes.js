@@ -14,30 +14,24 @@ module.exports = function (app) {
             compatibility: 1000
         };
 
-        console.log(req.body);
-
         var userData = req.body;
         var userScores = userData.scores;
-
-        console.log(userScores);
-
         var totalDifference = 0;
 
-        for (var i = 0; i < frendsList.length; i++) {
-            console.log(friendsList[i]);
+        for (var i = 0; i < friendList.length; i++) {
             totalDifference = 0;
 
-            for (var s = 0; s>friends[i].scores[s]; s++) {
+            for (var s = 0; s>friendList[i].scores[s]; s++) {
                 totalDifference =+ Math.abs(parseInt(userScore[s]) - parseInt(friendsList[i].scores[s]))
                 if (totalDifference <= bestMatch.compatibility) {
-                    bestMatch.name = friends[i].name;
-                    bestMatch.photo = friends[i].photo;
+                    bestMatch.name = friendList[i].name;
+                    bestMatch.photo = friendList[i].photo;
                     bestMatch.compatibility = totalDifference;
                 }
             }
         }
 
-        friendsList.push(userData);
+        friendList.push(userData);
         res.json(bestMatch);
 
     });

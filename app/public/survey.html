@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
     </head>
 
     <body>
@@ -172,58 +173,33 @@
         </p>
     </footer>
 
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">You should be friends with...</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+              <h2 class="modal-title"><strong>Best Match</strong></h2>
             </div>
             <div class="modal-body">
-              <p class ="match-name"></p>
-              <p class ="match-photo"></p>
+              <h2 id="match-name"></h2>
+              <img id="match-photo" src="#" alt="">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" id="closeMatch" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
-      </div>
+     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-// Chosen CSS
 
-// var config = {
-//       ".chosen-select": {},
-//       ".chosen-select-deselect": {
-//         allow_single_deselect: true
-//       },
-//       ".chosen-select-no-single": {
-//         disable_search_threshold: 10
-//       },
-//       ".chosen-select-no-results": {
-//         no_results_text: "Oops, nothing found!"
-//       },
-//       ".chosen-select-width": {
-//         width: "95%"
-//       }
-//     };
-
-//     for (var selector in config) {
-//       $(selector).chosen(config[selector]);
-//     }
-
-    // Capture the form inputs
     $("#submit").on("click", function(event) {
       event.preventDefault();
 
-      // Make sure everything is filled out
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function() {
@@ -240,11 +216,8 @@
         return isValid;
       }
 
-      // If all required fields are filled
       if (validateForm()) {
-        // Create an object for the user"s data
 
-        // THIS PART IS GOOD
         var userData = {
           name: $("#name").val().trim(),
           photo: $("#photo").val().trim(),
@@ -261,18 +234,15 @@
             $("#q10").val()
           ]
         };
-        console.log(userData);
-        ///////////////////////////
 
-        // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function(data) {
+        var currentURL = window.location.origin;
 
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $.post(currentURL + "/api/friendlist", userData, function(data) {
           $("#match-name").text(data.name);
           $("#match-photo").attr("src", data.photo);
-
-          // Show the modal with the best match
           $("#results-modal").modal("toggle");
+        console.log("working");
+        console.log(data.name);
 
         });
       } else {

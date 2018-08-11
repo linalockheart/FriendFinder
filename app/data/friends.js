@@ -1,4 +1,4 @@
-friendsList = [
+friendList = [
     {
         name: "Ross",
         photo: "https://imgs.6sqft.com/wp-content/uploads/2015/03/21002356/Ross-Gellar.jpg",
@@ -97,4 +97,4 @@ friendsList = [
     }
 ];
 
-module.exports = friendsList;
+module.exports = friendList;
