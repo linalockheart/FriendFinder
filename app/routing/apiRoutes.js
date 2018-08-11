@@ -16,13 +16,14 @@ module.exports = function (app) {
 
         var userData = req.body;
         var userScores = userData.scores;
+
         var totalDifference = 0;
 
         for (var i = 0; i < friendList.length; i++) {
             totalDifference = 0;
 
-            for (var s = 0; s>friendList[i].scores[s]; s++) {
-                totalDifference =+ Math.abs(parseInt(userScore[s]) - parseInt(friendsList[i].scores[s]))
+            for (var s = 0; s < friendList[i].scores[s]; s++) {
+                totalDifference += Math.abs(parseInt(userScores[s]) - parseInt(friendList[i].scores[s]));
                 if (totalDifference <= bestMatch.compatibility) {
                     bestMatch.name = friendList[i].name;
                     bestMatch.photo = friendList[i].photo;
