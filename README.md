@@ -8,7 +8,7 @@
   <li>Path</li>
  </ul>
  
- <h2>Build with</h2>
+ <h2>Built with</h2>
  <ul>
   <li>HTML</li>
   <li>CSS</li>
