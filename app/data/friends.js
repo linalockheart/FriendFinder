@@ -1,7 +1,7 @@
 friendList = [
     {
         name: "Ross",
-        photo: "https://imgs.6sqft.com/wp-content/uploads/2015/03/21002356/Ross-Gellar.jpg",
+        photo: "https://pbs.twimg.com/profile_images/1017221140677349376/dhSnvw-1_400x400.jpg",
         scores: [
             "1",
             "4",
@@ -33,7 +33,7 @@ friendList = [
     },
     {
         name: "Chandler",
-        photo: "https://media0ch-a.akamaihd.net/82/99/de4570a567fe8f43e202f9f1aee84bb1.jpg",
+        photo: "https://pbs.twimg.com/profile_images/917789882776522752/7nZeyOPc_400x400.jpg",
         scores: [
             "5",
             "4",
@@ -49,7 +49,7 @@ friendList = [
     },
     {
         name: "Monica",
-        photo: "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fimages.hellogiggles.com%2Fuploads%2F2016%2F03%2F02074507%2Fmonica.jpg&w=700&q=85",
+        photo: "https://home.adelphi.edu/~ni21572/Monica.jpg",
         scores: [
             "3",
             "5",
@@ -65,7 +65,7 @@ friendList = [
     },
     {
         name: "Joey",
-        photo: "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fimages.hellogiggles.com%2Fuploads%2F2016%2F07%2F03011013%2Ffriends.jpg&w=700&q=85",
+        photo: "https://vignette.wikia.nocookie.net/friends/images/6/61/Joey_friends.jpg/revision/latest?cb=20130523190938",
         scores: [
             "1",
             "1",
@@ -81,7 +81,7 @@ friendList = [
     },
     {
         name: "Phoebe",
-        photo: "http://media.tumblr.com/a5a4651999486da07db13287fa302562/tumblr_inline_mll1ok8Fwk1qz4rgp.jpg",
+        photo: "https://vignette.wikia.nocookie.net/friendstelevisonseries/images/5/5f/458477-phoebe_buffay_lisa_kudrow.jpg/revision/latest?cb=20120406001836",
         scores: [
             "4",
             "2",
